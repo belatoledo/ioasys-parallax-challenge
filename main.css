@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  background-color: #010716;
+}
+
+section {
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(
+    -225deg,
+    #07011f 34%,
+    #04122f 67%,
+    #07011f 88%,
+    #010716 100%
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  text-align: center;
+  color: aliceblue;
+
+  outline: none;
+
+  z-index: 2;
+}
+
+section h1 {
+  padding-top: 20px;
+}
+
+section p {
+  padding: 100px 4% 12px 4%;
+}
+
+section:nth-of-type(1) {
+  background-image: url("./assets/galaxy1.jpg");
+  animation: blur-effect 5s alternate infinite;
+}
+
+section:nth-of-type(3) {
+  background-image: url("./assets/galaxy2.jpg");
+  animation: blur-effect 5s alternate infinite;
+}
+
+section:nth-of-type(5) {
+  background-image: url("./assets/galaxy3.jpg");
+  animation: blur-effect 5s alternate infinite;
+}
+
+section:nth-of-type(7) {
+  background-image: url("./assets/galaxy4.jpg");
+  animation: blur-effect 5s alternate infinite;
+}
+
+@keyframes blur-effect {
+  0% {
+    filter: blur(0);
+  }
+  50% {
+    translate: scale(120%);
+  }
+  100% {
+    filter: blur(3px);
+    translate: scale(100%);
+  }
+}
